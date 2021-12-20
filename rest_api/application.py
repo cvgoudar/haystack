@@ -20,7 +20,7 @@ from rest_api.controller.router import router as api_router
 
 
 def get_application() -> FastAPI:
-    application = FastAPI(title="Haystack-API", debug=True, version="0.10", root_path=ROOT_PATH)
+    application = FastAPI(title="Haystack-API", debug=True, version="1.0.0", root_path=ROOT_PATH)
 
     # This middleware enables allow all cross-domain requests to the API from a browser. For production
     # deployments, it could be made more restrictive.
@@ -50,7 +50,7 @@ use_route_names_as_operation_ids(app)
 logger.info("Open http://127.0.0.1:8000/docs to see Swagger API Documentation.")
 logger.info(
     """
-    Or just try it out directly: curl --request POST --url 'http://127.0.0.1:8000/query' -H "Content-Type: application/json"  --data '{"query": "Did Albus Dumbledore die?"}'
+    Or just try it out directly: curl --request POST --url 'http://127.0.0.1:8000/query' -H "Content-Type: application/json"  --data '{"query": "Who is the father of Arya Stark?"}'
     """
 )
 
